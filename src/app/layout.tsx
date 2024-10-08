@@ -5,16 +5,16 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { CustomThemeProvider } from './CustomThemeProvider'
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900'
-})
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900'
-})
+// const geistSans = localFont({
+//   src: './fonts/GeistVF.woff',
+//   variable: '--font-geist-sans',
+//   weight: '100 900'
+// })
+// const geistMono = localFont({
+//   src: './fonts/GeistMonoVF.woff',
+//   variable: '--font-geist-mono',
+//   weight: '100 900'
+// })
 
 export const metadata: Metadata = {
   title: 'Himanshu Jain',
@@ -29,7 +29,7 @@ export default function RootLayout ({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CustomThemeProvider>
           <header>
