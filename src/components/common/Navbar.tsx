@@ -2,9 +2,10 @@
 
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import logo from '../../public/images/hjLogo.png'
+import logo from '../../../public/images/hjLogo.png'
 import Image from 'next/image'
 import ThemeSwitch from './ThemeSwitch'
+import { useRouter } from 'next/navigation'
 
 const NavLinks = [
   {
@@ -12,8 +13,16 @@ const NavLinks = [
     path: '/'
   },
   {
+    label: 'About',
+    path: '/about'
+  },
+  {
     label: 'Projects',
     path: '/projects'
+  },
+  {
+    label: 'Contact',
+    path: '/contact'
   }
 ]
 
@@ -60,7 +69,9 @@ export function Navbar () {
             <div key={index}>
               <div className='font-semibold px-3 py-2'>
                 <Link href={link.path}>
-                  <span className='p-1'>{link.label}</span>
+                  <span className='p-1 hover:text-blue-400 transition-all duration-200'>
+                    {link.label}
+                  </span>
                 </Link>
               </div>
             </div>
