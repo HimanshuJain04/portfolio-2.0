@@ -31,7 +31,7 @@ export const Cover = ({
       );
       setBeamPositions(positions);
     }
-  }, [ref.current]);
+  }, [ref.current]); //eslint-disable-line
 
   return (
     <div
@@ -212,7 +212,6 @@ export const Beam = ({
 
 export const CircleIcon = ({
   className,
-  delay,
 }: {
   className?: string;
   delay?: number;

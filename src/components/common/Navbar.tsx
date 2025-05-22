@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react'
 import logo from '../../../public/images/hjLogo.png'
 import Image from 'next/image'
 import ThemeSwitch from './ThemeSwitch'
-import { useRouter } from 'next/navigation'
 
 const NavLinks = [
   {
@@ -26,7 +25,7 @@ const NavLinks = [
   }
 ]
 
-export function Navbar () {
+export function Navbar() {
   const [scrollTop, setScrollTop] = useState(false)
 
   useEffect(() => {
@@ -47,11 +46,10 @@ export function Navbar () {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-[200] mx-auto mt-4 flex w-[95%] max-w-[50rem] items-center justify-between rounded-2xl px-4 py-2 antialiased md:w-full md:px-10 bg-white/[0.5] backdrop-blur-xl  transition-all ease-in-out duration-100   ${
-        scrollTop
-          ? 'shadow-2xl shadow-black/25 dark:bg-white/[6%]'
-          : 'shadow-none dark:bg-black'
-      } 
+      className={`fixed inset-x-0 top-0 z-[200] mx-auto mt-4 flex w-[95%] max-w-[50rem] items-center justify-between rounded-2xl px-4 py-2 antialiased md:w-full md:px-10 bg-white/[0.5] backdrop-blur-xl  transition-all ease-in-out duration-100   ${scrollTop
+        ? 'shadow-2xl shadow-black/25 dark:bg-white/[6%]'
+        : 'shadow-none dark:bg-black'
+        } 
 `}
     >
       {/* logo part */}
