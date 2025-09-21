@@ -1,4 +1,4 @@
-import { EXPERIENCE, Experience } from "@/constants/experience";
+import { EXPERIENCE, type Experience } from "@/constants/experience";
 import { MdOutlineDateRange } from "react-icons/md";
 
 function Card({ exp }: { exp: Experience }) {

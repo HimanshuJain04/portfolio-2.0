@@ -1,4 +1,4 @@
-import { SKILLS1, SKILLS2, Skill } from "@/constants/skills";
+import { SKILLS1, SKILLS2, type Skill } from "@/constants/skills";
 import Image from "next/image";
 
 function Card({ skill }: { skill: Skill }) {
