@@ -1,5 +1,6 @@
-import { Footer, Navbar } from "@/components/common";
 import type { Metadata } from "next";
+import { Footer } from "../components/common/footer";
+import { Navbar } from "../components/common/navbar";
 import { CustomThemeProvider } from "./CustomThemeProvider";
 import "./globals.css";
 
