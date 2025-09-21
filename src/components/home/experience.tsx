@@ -3,12 +3,12 @@ import { MdOutlineDateRange } from "react-icons/md";
 
 function Card({ exp }: { exp: Experience }) {
   return (
-    <div className="w-full p-5 rounded-lg bg-neutral-900 flex flex-col gap-2">
+    <div className="w-full p-5 rounded-lg bg-neutral-100 dark:bg-neutral-900 flex flex-col gap-2">
       {/* name | position | type */}
       <div className="w-full flex justify-between items-center">
         <div className="flex flex-col">
           <h5 className="font-semibold text-lg">{exp.position}</h5>
-          <h6 className="text-sm text-neutral-400 font-medium">
+          <h6 className="text-sm dark:text-neutral-400 text-neutral-500 font-medium">
             {exp.companyName}
           </h6>
         </div>

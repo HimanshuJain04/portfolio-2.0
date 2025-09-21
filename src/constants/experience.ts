@@ -51,23 +51,11 @@ export const EXPERIENCE: Experience[] = [
     ],
   },
   {
-    companyName: "Mintix",
-    position: "Founding Engineer",
-    from: "December 2024",
+    companyName: "",
+    position: "Freelance",
+    from: "January 2024",
     to: "Present",
-    type: "Full-time",
-    href: "https://mintixapp.com",
-    description:
-      "Building a next-generation ticketing platform from scratch, handling core architecture, feature development, and app store deployments.",
-    techStack: [
-      "Next.js",
-      "React Native",
-      "Drizzle",
-      "Tailwind CSS",
-      "Solana",
-      "Web3",
-      "Redis",
-      "Stripe",
-    ],
+    type: "Freelance",
+    href: "#",
   },
 ];
