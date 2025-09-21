@@ -1,0 +1,50 @@
+import { EXPERIENCE, Experience } from "@/constants/experience";
+import { MdOutlineDateRange } from "react-icons/md";
+
+function Card({ exp }: { exp: Experience }) {
+  return (
+    <div className="w-full p-5 rounded-lg bg-neutral-900 flex flex-col gap-2">
+      {/* name | position | type */}
+      <div className="w-full flex justify-between items-center">
+        <div className="flex flex-col">
+          <h5 className="font-semibold text-lg">{exp.position}</h5>
+          <h6 className="text-sm text-neutral-400 font-medium">
+            {exp.companyName}
+          </h6>
+        </div>
+
+        <span className="rounded-full px-3 text-sm py-1 dark:bg-white/20 bg-black/5 dark:text-neutral-300 text-neutral-40">
+          {exp.type}
+        </span>
+      </div>
+
+      {/* from-to */}
+      <div className="text-neutral-700 text-sm dark:text-neutral-400 flex items-center gap-2">
+        <MdOutlineDateRange />
+        <span>
+          {exp.from} - {exp.to}
+        </span>
+      </div>
+
+      {/* description */}
+      <p className="text-neutral-700 text-sm dark:text-neutral-400">
+        {exp.description}
+      </p>
+
+      {/* stack */}
+      <div className="text-sm text-neutral-600 dark:text-neutral-300">
+        Tech Stack: {exp.techStack?.join(", ")}
+      </div>
+    </div>
+  );
+}
+
+export function Experience() {
+  return (
+    <section className="flex flex-col gap-3">
+      {EXPERIENCE.map((e, idx) => (
+        <Card key={idx} exp={e} />
+      ))}
+    </section>
+  );
+}

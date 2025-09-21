@@ -4,7 +4,7 @@
       "mode": "auto"
     }
   ],
-  "cSpell.words": ["Himanshu"],
+  "cSpell.words": ["Hexleap", "Himanshu", "Mintix"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
