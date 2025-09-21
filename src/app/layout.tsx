@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Footer } from "../components/common/footer";
-import { Navbar } from "../components/common/navbar";
 import { CustomThemeProvider } from "./CustomThemeProvider";
 import "./globals.css";
 
@@ -18,15 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <CustomThemeProvider>
-          <header>
-            <Navbar />
-          </header>
-
           <main>{children}</main>
-
-          <footer>
-            <Footer />
-          </footer>
         </CustomThemeProvider>
       </body>
     </html>
