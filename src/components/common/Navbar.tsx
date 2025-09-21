@@ -26,7 +26,7 @@ const NavLinks = [
   },
 ];
 
-export function Nav() {
+export default function Navbar() {
   const [scrollTop, setScrollTop] = useState(false);
 
   useEffect(() => {
