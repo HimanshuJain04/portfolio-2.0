@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import logo from '../../../public/images/hjLogo.png'
 import Image from 'next/image'
-import ThemeSwitch from './ThemeSwitch'
+import ThemeSwitch from './theme-switch'
 
 const NavLinks = [
   {

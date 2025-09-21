@@ -1,21 +1,21 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import { Navbar } from '@/components/common/Navbar'
-import { Footer } from '@/components/common/Footer'
-import { CustomThemeProvider } from './CustomThemeProvider'
+import { Footer } from "@/components/common/footer";
+import { Navbar } from "@/components/common/navbar";
+import type { Metadata } from "next";
+import { CustomThemeProvider } from "./CustomThemeProvider";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Himanshu Jain',
-  description: 'Himanshu Jain Portfolio'
-}
+  title: "Himanshu Jain",
+  description: "Himanshu Jain Portfolio",
+};
 
-export default function RootLayout ({
-  children
+export default function RootLayout({
+  children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
         <CustomThemeProvider>
           <header>
@@ -30,5 +30,5 @@ export default function RootLayout ({
         </CustomThemeProvider>
       </body>
     </html>
-  )
+  );
 }

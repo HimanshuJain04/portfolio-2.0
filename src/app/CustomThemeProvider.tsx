@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from "next-themes";
 
-export function CustomThemeProvider ({
-  children
+export function CustomThemeProvider({
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       {children}
     </ThemeProvider>
-  )
+  );
 }
