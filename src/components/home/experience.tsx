@@ -41,10 +41,23 @@ function Card({ exp }: { exp: Experience }) {
 
 export function Experience() {
   return (
-    <section className="flex flex-col gap-3">
-      {EXPERIENCE.map((e, idx) => (
-        <Card key={idx} exp={e} />
-      ))}
+    <section className="flex flex-col gap-5">
+      {/* title | subtitle */}
+      <div>
+        <h2 className="text-3xl font-bold">Experience</h2>
+        <p className="text-sm mt-1 text-neutral-400 dark:text-neutral-500">
+          shipping fast and building for production ever since I started,
+          writing maintainable code & managing product scalabilty for those
+          fridays to be hassle free!
+        </p>
+      </div>
+
+      {/* experience */}
+      <div className="flex flex-col gap-3">
+        {EXPERIENCE.map((e, idx) => (
+          <Card key={idx} exp={e} />
+        ))}
+      </div>
     </section>
   );
 }
