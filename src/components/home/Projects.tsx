@@ -1,34 +1,3 @@
-const data = [
-  {
-    imageUrl: "",
-    title: "",
-    description: "",
-    githubLink: "",
-    liveLink: "",
-  },
-  {
-    imageUrl: "",
-    title: "",
-    description: "",
-    githubLink: "",
-    liveLink: "",
-  },
-  {
-    imageUrl: "",
-    title: "",
-    description: "",
-    githubLink: "",
-    liveLink: "",
-  },
-  {
-    imageUrl: "",
-    title: "",
-    description: "",
-    githubLink: "",
-    liveLink: "",
-  },
-];
-
 export function Projects() {
   return (
     <section className="flex flex-col gap-5">
