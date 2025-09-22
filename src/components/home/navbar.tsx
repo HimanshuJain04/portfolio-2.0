@@ -7,24 +7,20 @@ import { useEffect, useState } from "react";
 import logo from "../../../public/images/hjLogo.png";
 import ThemeSwitch from "../common/theme-switch";
 
-const NavLinks = [
-  {
-    label: "Home",
-    path: "/",
-  },
-  {
-    label: "About",
-    path: "/about",
-  },
-  {
-    label: "Projects",
-    path: "/projects",
-  },
-  {
-    label: "Contact",
-    path: "/contact",
-  },
-];
+// const NavLinks = [
+//   {
+//     label: "About",
+//     path: "/about",
+//   },
+//   {
+//     label: "Projects",
+//     path: "/projects",
+//   },
+//   {
+//     label: "Contact",
+//     path: "/contact",
+//   },
+// ];
 
 export function Navbar() {
   const [scrollTop, setScrollTop] = useState(false);
@@ -64,7 +60,7 @@ export function Navbar() {
       {/* links | theme*/}
       <div className="flex flex-row items-center gap-5">
         {/* links */}
-        <div className="flex flex-row items-center">
+        {/* <div className="flex flex-row items-center">
           {NavLinks.map((link, index) => (
             <div key={index}>
               <div className="font-semibold px-3 py-2">
@@ -76,7 +72,7 @@ export function Navbar() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* theme */}
         <ThemeSwitch />

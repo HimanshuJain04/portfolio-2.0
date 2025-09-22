@@ -88,3 +88,13 @@ html {
 *::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb-hover);
 }
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+.dark ::selection {
+  background-color: white;
+  color: black;
+}

@@ -1,52 +1,49 @@
-import { ProjectCard } from './project'
-
 const data = [
   {
-    imageUrl: '',
-    title: '',
-    description: '',
-    githubLink: '',
-    liveLink: ''
+    imageUrl: "",
+    title: "",
+    description: "",
+    githubLink: "",
+    liveLink: "",
   },
   {
-    imageUrl: '',
-    title: '',
-    description: '',
-    githubLink: '',
-    liveLink: ''
+    imageUrl: "",
+    title: "",
+    description: "",
+    githubLink: "",
+    liveLink: "",
   },
   {
-    imageUrl: '',
-    title: '',
-    description: '',
-    githubLink: '',
-    liveLink: ''
+    imageUrl: "",
+    title: "",
+    description: "",
+    githubLink: "",
+    liveLink: "",
   },
   {
-    imageUrl: '',
-    title: '',
-    description: '',
-    githubLink: '',
-    liveLink: ''
-  }
-]
+    imageUrl: "",
+    title: "",
+    description: "",
+    githubLink: "",
+    liveLink: "",
+  },
+];
 
-export function Projects () {
+export function Projects() {
   return (
-    <div className='w-full flex z-10  flex-col  gap-24 justify-center items-center p-10'>
-      {/* heading */}
+    <section className="flex flex-col gap-5">
+      {/* title | subtitle */}
       <div>
-        <h2 className='text-xs sm:text-base md:text-xl lg:text:3xl xl:text-6xl font-bold text-blue-500'>
-          Projects
-        </h2>
+        <h2 className="text-3xl font-bold">Projects</h2>
+        <p className="text-sm mt-1 text-neutral-400 dark:text-neutral-500">
+          A mix of professional work, open-source contributions, and passion
+          projects — where I explore new tech, push my limits, and build things
+          I genuinely enjoy using.
+        </p>
       </div>
 
-      {/* projects */}
-      <div className='grid grid-cols-2 gap-20'>
-        {data.map((project, index) => (
-          <ProjectCard key={index} data={project} />
-        ))}
-      </div>
-    </div>
-  )
+      {/* projects  */}
+      <div className="text-center">Coming Soon</div>
+    </section>
+  );
 }

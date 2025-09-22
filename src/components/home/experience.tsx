@@ -33,7 +33,8 @@ function Card({ exp }: { exp: Experience }) {
 
       {/* stack */}
       <div className="text-sm text-neutral-600 dark:text-neutral-300">
-        Tech Stack: {exp.techStack?.join(", ")}
+        <span className="text-neutral-500">Tech Stack:</span>{" "}
+        {exp.techStack?.join(", ")}
       </div>
     </div>
   );
@@ -46,9 +47,8 @@ export function Experience() {
       <div>
         <h2 className="text-3xl font-bold">Experience</h2>
         <p className="text-sm mt-1 text-neutral-400 dark:text-neutral-500">
-          shipping fast and building for production ever since I started,
-          writing maintainable code & managing product scalabilty for those
-          fridays to be hassle free!
+          Focused on building and shipping products fast, with clean, scalable
+          code that keeps releases smooth and stress-free.
         </p>
       </div>
 

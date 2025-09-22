@@ -13,6 +13,8 @@ function Card({ skill }: { skill: Skill }) {
 export function Skills() {
   return (
     <section className="flex flex-col gap-5">
+      {/* <h2 className="text-3xl font-bold">Skills</h2> */}
+
       {/* First Marquee: left to right */}
       <div className="marquee-container">
         <div className="marquee-track">
