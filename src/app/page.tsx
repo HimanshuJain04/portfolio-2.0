@@ -6,7 +6,7 @@ import { Activity } from "@/components/home/activity";
 import { Experience } from "@/components/home/experience";
 import { Footer } from "@/components/home/footer";
 import { Navbar } from "@/components/home/navbar";
-import { Projects } from "@/components/home/projects";
+import { Projects } from "@/components/home/projects-section";
 import { Skills } from "@/components/home/skills";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { useLenis } from "@/hooks/useLenis";
