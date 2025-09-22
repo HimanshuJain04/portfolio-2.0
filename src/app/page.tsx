@@ -1,4 +1,4 @@
-import { FloatingDockSection } from "@/components/common/FloatingDockSection";
+import { FloatingDockSection } from "@/components/common/floating-dock-section";
 import { Footer } from "@/components/common/footer";
 import Navbar from "@/components/common/navbar";
 import { AboutMe } from "@/components/home/about-me";
