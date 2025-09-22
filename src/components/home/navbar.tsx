@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import logo from "../../../public/images/hjLogo.png";
-import ThemeSwitch from "./theme-switch";
+import ThemeSwitch from "../common/theme-switch";
 
 const NavLinks = [
   {
@@ -26,7 +26,7 @@ const NavLinks = [
   },
 ];
 
-export default function Navbar() {
+export function Navbar() {
   const [scrollTop, setScrollTop] = useState(false);
 
   useEffect(() => {
