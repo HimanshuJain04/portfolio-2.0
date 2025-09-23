@@ -37,6 +37,23 @@ export default function Home() {
           },
         })}
       </Script>
+      <Script
+        id="ld-website"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Himanshu Jain — Portfolio",
+          url: "https://www.himanshu.works",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://www.himanshu.works/?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        })}
+      </Script>
       <StarsBackground />
 
       <div className="max-w-2xl relative px-6 md:px-0 z-10 w-full min-h-screen mx-auto flex flex-col gap-10">

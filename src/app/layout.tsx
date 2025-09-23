@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "Software engineer building and shipping products fast with Next.js, TypeScript, React Native, Tailwind CSS, Solana, Prisma, and more.",
     images: [
       {
-        url: "/images/profile.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Himanshu Jain — Portfolio",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Himanshu Jain — Software Engineer",
     description:
       "Portfolio of Himanshu Jain. Next.js, React, TypeScript, Tailwind CSS, Web3, Solana, Prisma.",
-    images: ["/images/profile.jpg"],
+    images: ["/twitter-image"],
   },
   robots: {
     index: true,
@@ -78,6 +78,7 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: "/favicon.ico",
+    other: [{ rel: "manifest", url: "/site.webmanifest" }],
   },
 };
 
