@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import { BackgroundGradient } from "../ui/background-gradient";
 import Image from "next/image";
+import { BackgroundGradient } from "../ui/background-gradient";
 
 type ProjectCardType = {
   imageUrl: string;
@@ -18,7 +17,7 @@ export function ProjectCard({ data }: { data: ProjectCardType }) {
       <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
         <Image
           src={imageUrl}
-          alt="image"
+          alt={title}
           height="400"
           width="400"
           className="object-contain"

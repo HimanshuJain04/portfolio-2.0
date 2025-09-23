@@ -52,8 +52,8 @@ export function Navbar() {
     >
       {/* logo part */}
       <div className="xs:size-14 size-10">
-        <Link href="/">
-          <Image src={logo} alt="logo" height={70} width={50} />
+        <Link href="/" aria-label="Himanshu Jain — Home">
+          <Image src={logo} alt="Himanshu Jain logo" height={70} width={50} />
         </Link>
       </div>
 

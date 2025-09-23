@@ -30,7 +30,7 @@ export function AboutMe() {
       <div className="md:size-40 self-center sm:size-32 size-28 shrink-0 relative">
         <Image
           src={profilerUrl}
-          alt="profile"
+          alt="Portrait of Himanshu Jain"
           height={140}
           width={140}
           objectFit="contain"
