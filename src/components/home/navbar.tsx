@@ -51,7 +51,7 @@ export function Navbar() {
       )}
     >
       {/* logo part */}
-      <div>
+      <div className="xs:size-14 size-10">
         <Link href="/">
           <Image src={logo} alt="logo" height={70} width={50} />
         </Link>

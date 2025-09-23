@@ -18,7 +18,7 @@ export default function Home() {
     <div className="relative pt-32 pb-24 scroll-smooth bg-white dark:bg-black w-full">
       <StarsBackground />
 
-      <div className="max-w-2xl relative z-10 w-full min-h-screen mx-auto flex flex-col gap-10">
+      <div className="max-w-2xl relative px-6 md:px-0 z-10 w-full min-h-screen mx-auto flex flex-col gap-10">
         <Navbar />
         <AboutMe />
         <Skills />

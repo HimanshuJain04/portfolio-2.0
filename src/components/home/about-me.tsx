@@ -4,14 +4,16 @@ import profilerUrl from "/public/images/profile.jpg";
 export function AboutMe() {
   const highlight = "text-neutral-900 dark:text-neutral-200";
   return (
-    <div className="flex gap-10">
+    <div className="flex sm:flex-row flex-col-reverse gap-10">
       {/* name | bio */}
       <div className="flex z-20 flex-col gap-2">
         {/* name */}
-        <h1 className="text-5xl font-bold">Hi, I&apos;m Himanshu 👋</h1>
+        <h1 className="md:text-5xl xs:text-4xl text-3xl font-bold">
+          Hi, I&apos;m Himanshu 👋
+        </h1>
 
         {/* bio */}
-        <p className="text-neutral-700 dark:text-neutral-400">
+        <p className="text-neutral-700 md:text-base text-sm dark:text-neutral-400">
           Software engineer available for{" "}
           <span className={highlight}>contract or full-time roles</span>, with
           hands-on experience{" "}
@@ -25,7 +27,7 @@ export function AboutMe() {
       </div>
 
       {/* profile image */}
-      <div className="size-40 shrink-0 relative">
+      <div className="md:size-40 self-center sm:size-32 size-28 shrink-0 relative">
         <Image
           src={profilerUrl}
           alt="profile"
