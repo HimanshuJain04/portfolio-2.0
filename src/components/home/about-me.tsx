@@ -12,6 +12,10 @@ export function AboutMe() {
           Hi, I&apos;m Himanshu 👋
         </h1>
 
+        <h2 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+          Software Engineer — personal portfolio of Himanshu Jain
+        </h2>
+
         {/* bio */}
         <p className="text-neutral-700 md:text-base text-sm dark:text-neutral-400">
           Software engineer available for{" "}

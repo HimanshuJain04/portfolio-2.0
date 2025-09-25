@@ -1,3 +1,4 @@
+import { KEYWORDS } from "@/constants/seo";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { CustomThemeProvider } from "./CustomThemeProvider";
@@ -8,29 +9,12 @@ const siteUrl = "https://www.himanshu.works";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Himanshu Jain — Software Engineer",
+    default: "Himanshu Jain — Software Engineer (Portfolio)",
     template: "%s | Himanshu Jain",
   },
   description:
-    "Portfolio of Himanshu Jain, Software Engineer and Founding Engineer. Building fast, scalable products with Next.js, TypeScript, React Native, Tailwind CSS, and Web3 integrations.",
-  keywords: [
-    "Himanshu Jain",
-    "Himanshu",
-    "Software Engineer",
-    "Frontend Developer",
-    "Full Stack",
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "React Native",
-    "Web3",
-    "Solana",
-    "Prisma",
-    "Vercel",
-    "India engineer",
-    "Portfolio",
-  ],
+    "Himanshu Jain portfolio — Software Engineer and Founding Engineer. Building fast, scalable products with Next.js, TypeScript, React Native, Tailwind CSS, and Web3 integrations.",
+  keywords: KEYWORDS,
   authors: [{ name: "Himanshu Jain", url: siteUrl }],
   creator: "Himanshu Jain",
   publisher: "Himanshu Jain",

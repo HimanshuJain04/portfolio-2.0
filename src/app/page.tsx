@@ -27,6 +27,7 @@ export default function Home() {
           "@type": "Person",
           name: "Himanshu Jain",
           url: "https://www.himanshu.works",
+          image: "https://www.himanshu.works/images/profile.jpg",
           sameAs: [
             // Add profiles when available
           ],
