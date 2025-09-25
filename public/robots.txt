@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.himanshu.works/
+
+# Sitemaps
+Sitemap: https://www.himanshu.works/sitemap.xml

@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { CustomThemeProvider } from "./CustomThemeProvider";
 import "./globals.css";
@@ -92,8 +93,10 @@ export default function RootLayout({
       <body>
         <CustomThemeProvider>
           <main>{children}</main>
+          {/*  */}
         </CustomThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-XZFECN1S5Y" />
     </html>
   );
 }
