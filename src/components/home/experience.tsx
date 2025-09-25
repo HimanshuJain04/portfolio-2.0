@@ -47,9 +47,9 @@ export function Experience() {
     <section className="flex flex-col gap-5">
       {/* title | subtitle */}
       <div>
-        <h2 className="md:text-3xl xs:text-2xl text-xl font-bold">
+        <h3 className="md:text-3xl xs:text-2xl text-xl font-bold">
           Experience
-        </h2>
+        </h3>
         <p className="text-sm mt-1 text-neutral-400 dark:text-neutral-500">
           Focused on building and shipping products fast, with clean, scalable
           code that keeps releases smooth and stress-free.
