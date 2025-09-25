@@ -93,10 +93,10 @@ export default function RootLayout({
       <body>
         <CustomThemeProvider>
           <main>{children}</main>
-          {/*  */}
         </CustomThemeProvider>
+
+        <GoogleAnalytics gaId="G-XZFECN1S5Y" />
       </body>
-      <GoogleAnalytics gaId="G-XZFECN1S5Y" />
     </html>
   );
 }
