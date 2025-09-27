@@ -7,6 +7,7 @@ export type Experience = {
   href?: string;
   description?: string;
   techStack?: string[];
+  location?: string;
 };
 
 export const EXPERIENCE: Experience[] = [
@@ -15,6 +16,7 @@ export const EXPERIENCE: Experience[] = [
     position: "Software Engineer / Founding Engineer",
     from: "December 2024",
     to: "Present",
+    location: "Remote",
     type: "Full-time",
     href: "https://mintixapp.com",
     description:
@@ -41,6 +43,7 @@ export const EXPERIENCE: Experience[] = [
     to: "December 2024",
     type: "Internship",
     href: "https://www.hexleap.com",
+    location: "Remote",
     description:
       "Developed and shipped frontend for multiple dashboards and web apps from scratch — focusing on clean UI, scalable components, and smooth interactions.",
     techStack: [

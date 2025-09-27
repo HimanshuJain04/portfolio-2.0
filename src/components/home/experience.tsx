@@ -1,4 +1,6 @@
 import { EXPERIENCE, type Experience } from "@/constants/experience";
+import { BsDot } from "react-icons/bs";
+import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineDateRange } from "react-icons/md";
 
 function Card({ exp }: { exp: Experience }) {
@@ -20,12 +22,27 @@ function Card({ exp }: { exp: Experience }) {
         </span>
       </div>
 
-      {/* from-to */}
-      <div className="text-neutral-700 xs:text-sm text-xs dark:text-neutral-400 flex items-center gap-2">
-        <MdOutlineDateRange />
-        <span>
-          {exp.from} - {exp.to}
-        </span>
+      {/* date | location */}
+      <div className="flex gap-2 items-center text-neutral-700 xs:text-sm text-xs dark:text-neutral-400">
+        {/* date */}
+        <div className="flex items-center gap-2">
+          <MdOutlineDateRange />
+          <span>
+            {exp.from} - {exp.to}
+          </span>
+        </div>
+
+        {/* location */}
+        {exp.location && (
+          <>
+            <BsDot />
+
+            <div className="flex items-center gap-2">
+              <IoLocationOutline />
+              <span>{exp.location}</span>
+            </div>
+          </>
+        )}
       </div>
 
       {/* description */}
