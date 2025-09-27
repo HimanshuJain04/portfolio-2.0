@@ -35,7 +35,7 @@ export function FloatingDockSection() {
             title: "Linktree",
           },
           {
-            href: "https://drive.google.com/file/d/1li1-TozmtX4s41pEm0L4zpCIe8QT6MXz/view?usp=sharing",
+            href: "/resume",
             icon: <FaFilePdf />,
             title: "Resume",
           },
