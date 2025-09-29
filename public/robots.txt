@@ -1,7 +1,9 @@
-# *
 User-agent: *
 Allow: /
 
+# Disallow query parameters and search URLs
+Disallow: /*?*
+Disallow: /*q=*
 
-# Sitemaps
+# Sitemap
 Sitemap: https://www.himanshu.works/sitemap.xml

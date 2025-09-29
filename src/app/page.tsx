@@ -48,11 +48,8 @@ export default function Home() {
           "@type": "WebSite",
           name: "Himanshu Jain — Portfolio",
           url: "https://www.himanshu.works",
-          potentialAction: {
-            "@type": "SearchAction",
-            target: "https://www.himanshu.works/?q={search_term_string}",
-            "query-input": "required name=search_term_string",
-          },
+          description:
+            "Portfolio of Himanshu Jain, Software Engineer and Founding Engineer",
         })}
       </Script>
       <StarsBackground />
