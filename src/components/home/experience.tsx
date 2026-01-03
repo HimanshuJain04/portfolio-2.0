@@ -1,4 +1,5 @@
 import { EXPERIENCE, type Experience } from "@/constants/experience";
+import Link from "next/link";
 import { BsDot } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineDateRange } from "react-icons/md";
@@ -8,13 +9,20 @@ function Card({ exp }: { exp: Experience }) {
     <div className="w-full p-5 rounded-lg bg-neutral-100 dark:bg-neutral-900 flex flex-col gap-2">
       {/* name | position | type */}
       <div className="w-full flex justify-between items-start gap-2">
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-start items-start">
           <h5 className="font-semibold xs:text-base text-sm md:text-lg">
             {exp.position}
           </h5>
-          <h6 className="xs:text-sm text-xs dark:text-neutral-400 text-neutral-500 font-medium">
-            {exp.companyName}
-          </h6>
+
+          {exp.companyName && (
+            <Link
+              href={exp.href ?? "#"}
+              target="_blank"
+              className="xs:text-sm transition-colors text-xs dark:text-neutral-400 text-neutral-500 font-medium"
+            >
+              {exp.companyName}
+            </Link>
+          )}
         </div>
 
         <span className="rounded-full shrink-0 px-3 xs:text-sm text-xs py-1 dark:bg-white/20 bg-black/5 dark:text-neutral-300 text-neutral-40">

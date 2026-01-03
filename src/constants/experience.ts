@@ -1,5 +1,5 @@
 export type Experience = {
-  companyName: string;
+  companyName?: string;
   position: string;
   from: string;
   to: string;
@@ -12,15 +12,36 @@ export type Experience = {
 
 export const EXPERIENCE: Experience[] = [
   {
+    companyName: "GastroSmart",
+    position: "Software Engineer",
+    from: "January 2026",
+    to: "Present",
+    location: "Remote",
+    type: "Full-time",
+    // href: "https://gastrosmart.com",
+    description:
+      "Building full-stack features, improving system reliability, and shipping production-ready functionality in a team-driven environment.",
+    techStack: [
+      "Next.js",
+      "Nest.js",
+      "TypeScript",
+      "Mantine UI",
+      "Redis",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "Docker",
+    ],
+  },
+  {
     companyName: "Mintix",
     position: "Software Engineer / Founding Engineer",
     from: "December 2024",
-    to: "Present",
+    to: "January 2026",
     location: "Remote",
     type: "Full-time",
     href: "https://mintixapp.com",
     description:
-      "Building Mintix’s Web3-powered ticketing platform from the ground up — architecting apps, websites, and backend systems from scratch, integrating payments, and scaling for production.",
+      "Built Mintix’s Web3-powered ticketing platform from the ground up — architecting apps, websites, and backend systems, integrating payments, and taking the product to production scale.",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -40,7 +61,7 @@ export const EXPERIENCE: Experience[] = [
     companyName: "Hexleap",
     position: "Frontend Developer Intern",
     from: "April 2024",
-    to: "December 2024",
+    to: "January 2025",
     type: "Internship",
     href: "https://www.hexleap.com",
     location: "Remote",
@@ -56,12 +77,10 @@ export const EXPERIENCE: Experience[] = [
     ],
   },
   {
-    companyName: "",
     position: "Freelance",
     from: "January 2024",
     to: "Present",
     type: "Freelance",
-    href: "#",
     description:
       "Worked on multiple international projects delivering full-stack solutions, building modern UIs, APIs, and integrations to ship products quickly.",
     techStack: [
