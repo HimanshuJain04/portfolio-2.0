@@ -1,5 +1,4 @@
 import Image from "next/image";
-import profilerUrl from "/public/images/profile.jpg";
 
 export function AboutMe() {
   const highlight = "text-neutral-900 dark:text-neutral-200";
@@ -33,12 +32,11 @@ export function AboutMe() {
       {/* profile image */}
       <div className="md:size-40 self-center sm:size-32 size-28 shrink-0 relative">
         <Image
-          src={profilerUrl}
+          src="/images/profile.png"
           alt="Portrait of Himanshu Jain"
           height={140}
           width={140}
-          objectFit="contain"
-          className="rounded-full"
+          className="rounded-full object-contain"
         />
       </div>
     </div>
