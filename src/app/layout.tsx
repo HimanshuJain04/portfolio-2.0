@@ -1,6 +1,6 @@
 import { KEYWORDS } from "@/constants/seo";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { CustomThemeProvider } from "./CustomThemeProvider";
 import "./globals.css";
 
@@ -57,14 +57,17 @@ export const metadata: Metadata = {
     },
   },
   category: "Technology",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
   icons: {
     icon: "/favicon.ico",
     other: [{ rel: "manifest", url: "/site.webmanifest" }],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
 };
 
 export default function RootLayout({

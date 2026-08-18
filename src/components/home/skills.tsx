@@ -10,8 +10,7 @@ function Card({ skill }: { skill: Skill }) {
           alt={skill.label}
           width={30}
           height={30}
-          objectFit="contain"
-          className={skill.invertOnDark ? "dark:invert" : ""}
+          className={`object-contain ${skill.invertOnDark ? "dark:invert" : ""}`}
         />
       </div>
 
