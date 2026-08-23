@@ -28,8 +28,8 @@ export default function Home() {
           image: "https://www.himanshu.works/images/profile.png",
           sameAs: [
             "https://github.com/HimanshuJain04",
-            "https://www.linkedin.com/in/himanshu-jain-72b48925a",
-            "https://x.com/_Himanshu_dev",
+            "https://www.linkedin.com/in/himanxhujain/",
+            "https://x.com/himanxhujain",
           ],
           jobTitle: "Software Engineer",
           worksFor: {

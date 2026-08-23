@@ -42,9 +42,10 @@ export function AboutMe() {
 
       {/* proof line */}
       <p className="text-neutral-600 dark:text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl">
-        Founding engineer on a Web3 ticketing platform — built the web app,
-        organizer dashboard, iOS scanner, and the on-chain minting pipeline.
-        Solo.
+        Currently at <span className="text-neutral-900 dark:text-neutral-200">GastroSmart</span>.
+        Before that, founding engineer on a Web3 ticketing platform — I built
+        the web app, organizer dashboard, iOS scanner, and the on-chain minting
+        pipeline. Solo.
       </p>
 
       {/* actions | availability */}

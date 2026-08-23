@@ -58,8 +58,12 @@ export const metadata: Metadata = {
     },
   },
   category: "Technology",
+  // Tab/app icons generated from the profile logo (src/app/icon.png +
+  // src/app/apple-icon.png). Referenced explicitly because defining `icons`
+  // for the manifest link otherwise suppresses the file-convention injection.
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
     other: [{ rel: "manifest", url: "/site.webmanifest" }],
   },
 };

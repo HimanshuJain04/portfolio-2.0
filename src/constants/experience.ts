@@ -22,6 +22,7 @@ export const EXPERIENCE: Experience[] = [
     to: "Present",
     location: "Remote",
     type: "Full-time",
+    href: "https://www.gastro-smart.com",
     highlights: [
       "Building full-stack product features for a production food-catering platform.",
       "Working across Nest.js APIs, a PostgreSQL/Drizzle data layer, Redis, and the Next.js app.",
