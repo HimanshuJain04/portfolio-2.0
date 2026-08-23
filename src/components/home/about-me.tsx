@@ -1,6 +1,7 @@
 import { btnGhost, btnPrimary } from "@/lib/ui";
 import Image from "next/image";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 
 export function AboutMe() {
   const hl = "text-neutral-900 dark:text-neutral-100 font-medium";
@@ -53,9 +54,15 @@ export function AboutMe() {
         <Link href="#work" className={btnPrimary}>
           Selected work
         </Link>
-        <Link href="/resume" className={btnGhost}>
-          Résumé
-        </Link>
+        <a
+          href="https://github.com/HimanshuJain04"
+          target="_blank"
+          rel="noreferrer"
+          className={btnGhost}
+        >
+          <FaGithub className="size-4" />
+          GitHub
+        </a>
 
         <span className="sm:ml-auto inline-flex items-center gap-2 font-mono text-xs text-neutral-500 dark:text-neutral-400">
           <span className="relative flex size-2">

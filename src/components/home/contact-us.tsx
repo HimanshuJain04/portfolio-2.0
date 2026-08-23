@@ -1,5 +1,6 @@
 import { btnGhost, btnPrimary } from "@/lib/ui";
 import { BiLogoGmail } from "react-icons/bi";
+import { FaLinkedin } from "react-icons/fa";
 import { SectionHeading } from "../common/section-heading";
 
 export function Contact() {
@@ -15,8 +16,14 @@ export function Contact() {
           <BiLogoGmail className="size-4" />
           himanshu09.dev@gmail.com
         </a>
-        <a href="/resume" className={btnGhost}>
-          Résumé
+        <a
+          href="https://www.linkedin.com/in/himanxhujain/"
+          target="_blank"
+          rel="noreferrer"
+          className={btnGhost}
+        >
+          <FaLinkedin className="size-4" />
+          LinkedIn
         </a>
       </div>
     </section>
