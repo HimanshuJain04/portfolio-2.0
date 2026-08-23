@@ -48,7 +48,7 @@ export default async function WorkPage({
       : undefined;
 
   return (
-    <div className="relative min-h-screen w-full bg-white pb-24 pt-32 dark:bg-black">
+    <div className="relative min-h-screen w-full bg-neutral-50 pb-24 pt-32 dark:bg-neutral-950">
       <StarsBackground />
       <div className="relative z-10 mx-auto flex w-full max-w-2xl flex-col gap-16 px-6 md:px-0">
         <Navbar />

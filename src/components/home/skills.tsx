@@ -4,7 +4,7 @@ import { SectionHeading } from "../common/section-heading";
 
 export function Skills() {
   return (
-    <section className="flex flex-col gap-5">
+    <section id="stack" className="flex flex-col gap-5 scroll-mt-24">
       <SectionHeading
         label="~/stack"
         title="Stack"

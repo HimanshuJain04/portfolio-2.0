@@ -18,7 +18,7 @@ export default function Home() {
   useLenis();
 
   return (
-    <div className="relative pt-32 pb-24 scroll-smooth bg-white dark:bg-black w-full">
+    <div className="relative pt-32 pb-24 scroll-smooth bg-neutral-50 dark:bg-neutral-950 w-full">
       <Script id="ld-person" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",

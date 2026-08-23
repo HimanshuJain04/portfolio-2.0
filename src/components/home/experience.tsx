@@ -83,7 +83,7 @@ function Entry({ exp }: { exp: Exp }) {
 
 export function Experience() {
   return (
-    <section className="flex flex-col gap-5">
+    <section id="experience" className="flex flex-col gap-5 scroll-mt-24">
       <SectionHeading
         label="~/experience"
         title="Experience"
