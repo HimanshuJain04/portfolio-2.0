@@ -66,9 +66,9 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Web3 ticketing platform — web app, organizer dashboard, iOS scanner, and on-chain minting.",
     period: "Dec 2024 – Jan 2026",
     liveUrl: "https://mintixapp.com",
-    note: "I built the full platform to production-ready; the company was still pre-launch when I moved on. This is a scope-and-craft story, not a traffic one.",
+    note: "I built the product end-to-end; the company was still pre-launch when I moved on — so this is a scope-and-craft story, not a traffic one.",
     cardBlurb:
-      "Built the entire platform solo — turning event tickets into Solana NFTs, with payments, seat mapping, and a mobile check-in app.",
+      "Built the product end-to-end — turning event tickets into Solana NFTs, with payments, seat mapping, and a mobile check-in app.",
     keyTech: ["Next.js", "React Native", "Solana", "Stripe"],
     // TODO(himanshu): drop a real product screenshot here (e.g. "/images/work/mintix-cover.png").
     cover: undefined,
@@ -135,7 +135,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     name: "Internal Work-Management Platform",
     role: "Freelance · Full-stack Engineer",
     tagline:
-      "A flexible ClickUp alternative built for a company's internal operations.",
+      "A flexible, ClickUp-style workspace built for a company's internal operations.",
     period: "2025",
     confidential: true,
     cardBlurb:

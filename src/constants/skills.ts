@@ -15,7 +15,6 @@ import {
   SiPrisma,
   SiReact,
   SiRedis,
-  SiRust,
   SiSolana,
   SiStripe,
   SiSupabase,
@@ -23,6 +22,7 @@ import {
   SiTypescript,
   SiVercel,
 } from "react-icons/si";
+import { TbDiamond } from "react-icons/tb";
 
 export type Tech = {
   label: string;
@@ -42,7 +42,6 @@ export const STACK: StackGroup[] = [
     items: [
       { label: "TypeScript", Icon: SiTypescript, primary: true },
       { label: "JavaScript", Icon: SiJavascript, primary: true },
-      { label: "Rust", Icon: SiRust },
     ],
   },
   {
@@ -80,6 +79,7 @@ export const STACK: StackGroup[] = [
     items: [
       { label: "Stripe", Icon: SiStripe, primary: true },
       { label: "Solana", Icon: SiSolana, primary: true },
+      { label: "Metaplex", Icon: TbDiamond, primary: true },
     ],
   },
   {

@@ -7,13 +7,13 @@ export function About() {
       <div className="flex flex-col gap-3 text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl">
         <p>
           I care about owning a product end-to-end — auth, payments, data
-          models, the mobile build, and the deploy included. Most of what I know
-          came from shipping real things under real constraints, not tutorials.
+          models, the mobile build, and the deploy included.
         </p>
         <p>
-          I move fast, sweat the details, and I&apos;m happiest with a hard
-          problem and a deadline. Lately I&apos;m deep in backend-heavy product
-          work and always chasing the next thing worth building.
+          Most of what I&apos;ve learned came from figuring things out myself —
+          unfamiliar codebases, production bugs, infrastructure problems, and
+          features with no Stack Overflow answer waiting. Lately I&apos;ve been
+          deep in backend-heavy product work.
         </p>
       </div>
     </section>

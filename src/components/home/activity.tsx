@@ -14,7 +14,7 @@ export function Activity() {
       <SectionHeading
         label="~/activity"
         title="Consistency"
-        subtitle="I ship code most days. Here's the last year on GitHub — private work included."
+        subtitle="The last year on GitHub — private work included."
       />
 
       <div className="overflow-x-auto rounded-xl border border-black/10 dark:border-white/10 bg-black/[0.02] p-4 dark:bg-white/[0.03]">

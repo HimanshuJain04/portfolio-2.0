@@ -47,7 +47,7 @@ export function AboutMe() {
         Currently at <span className="text-neutral-900 dark:text-neutral-200">GastroSmart</span>.
         Before that, founding engineer on a Web3 ticketing platform — I built
         the web app, organizer dashboard, iOS scanner, and the on-chain minting
-        pipeline. Solo.
+        pipeline.
       </p>
 
       {/* actions | availability */}
