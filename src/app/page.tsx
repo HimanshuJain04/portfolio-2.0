@@ -49,9 +49,9 @@ export default function Home() {
         })}
       </Script>
       <StarsBackground />
+      <Navbar />
 
       <div className="max-w-2xl relative px-6 md:px-0 z-10 w-full min-h-screen mx-auto flex flex-col gap-16">
-        <Navbar />
         <AboutMe />
         <SelectedWork />
         <Experience />

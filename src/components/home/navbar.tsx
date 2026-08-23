@@ -29,7 +29,7 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-[200] mx-auto mt-3 flex w-full max-w-2xl items-center justify-between rounded-2xl border px-3 py-2 antialiased transition-all duration-300 md:px-4",
         scrolled
-          ? "border-black/[0.06] bg-white/70 shadow-sm shadow-black/5 backdrop-blur-md dark:border-white/10 dark:bg-neutral-900/60"
+          ? "border-black/[0.06] bg-white/80 shadow-sm shadow-black/5 backdrop-blur-lg dark:border-white/10 dark:bg-neutral-950/80"
           : "border-transparent bg-transparent shadow-none"
       )}
     >

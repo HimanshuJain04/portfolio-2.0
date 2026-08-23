@@ -10,7 +10,7 @@ export function Activity() {
   };
 
   return (
-    <section className="z-20 flex flex-col gap-4">
+    <section className="flex flex-col gap-4">
       <SectionHeading
         label="~/activity"
         title="Consistency"
