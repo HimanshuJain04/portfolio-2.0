@@ -1,92 +1,99 @@
-import { EXPERIENCE, type Experience } from "@/constants/experience";
+import { EXPERIENCE, type Experience as Exp } from "@/constants/experience";
 import Link from "next/link";
-import { BsDot } from "react-icons/bs";
-import { IoLocationOutline } from "react-icons/io5";
-import { MdOutlineDateRange } from "react-icons/md";
+import { FiArrowUpRight } from "react-icons/fi";
+import { SectionHeading } from "../common/section-heading";
 
-function Card({ exp }: { exp: Experience }) {
+function Entry({ exp }: { exp: Exp }) {
   return (
-    <div className="w-full p-5 rounded-lg bg-neutral-100 dark:bg-neutral-900 flex flex-col gap-2">
-      {/* name | position | type */}
-      <div className="w-full flex justify-between items-start gap-2">
-        <div className="flex flex-col justify-start items-start">
-          <h5 className="font-semibold xs:text-base text-sm md:text-lg">
-            {exp.position}
-          </h5>
+    <li className="relative flex flex-col gap-2 border-l border-black/10 dark:border-white/10 pl-5 pb-7 last:pb-0">
+      <span className="absolute -left-[3.5px] top-2 size-[6px] rounded-full bg-neutral-400 dark:bg-neutral-600" />
 
+      {/* position · company | dates */}
+      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+        <h3 className="font-semibold md:text-lg">
+          {exp.position}
           {exp.companyName && (
-            <Link
-              href={exp.href ?? "#"}
-              target="_blank"
-              className="xs:text-sm transition-colors text-xs dark:text-neutral-400 text-neutral-500 font-medium"
-            >
-              {exp.companyName}
-            </Link>
+            <>
+              <span className="mx-1.5 text-neutral-300 dark:text-neutral-700">·</span>
+              {exp.href ? (
+                <Link
+                  href={exp.href}
+                  target="_blank"
+                  className="underline decoration-dotted underline-offset-4 transition-colors hover:text-neutral-500"
+                >
+                  {exp.companyName}
+                </Link>
+              ) : (
+                exp.companyName
+              )}
+            </>
           )}
-        </div>
-
-        <span className="rounded-full shrink-0 px-3 xs:text-sm text-xs py-1 dark:bg-white/20 bg-black/5 dark:text-neutral-300 text-neutral-40">
-          {exp.type}
+        </h3>
+        <span className="shrink-0 font-mono text-xs text-neutral-500">
+          {exp.from} — {exp.to}
         </span>
       </div>
 
-      {/* date | location */}
-      <div className="flex gap-2 items-center text-neutral-700 xs:text-sm text-xs dark:text-neutral-400">
-        {/* date */}
-        <div className="flex items-center gap-2">
-          <MdOutlineDateRange />
-          <span>
-            {exp.from} - {exp.to}
-          </span>
-        </div>
-
-        {/* location */}
+      {/* type · location */}
+      <div className="flex items-center gap-2 font-mono text-[11px] text-neutral-400 dark:text-neutral-500">
+        <span>{exp.type}</span>
         {exp.location && (
           <>
-            <BsDot />
-
-            <div className="flex items-center gap-2">
-              <IoLocationOutline />
-              <span>{exp.location}</span>
-            </div>
+            <span>·</span>
+            <span>{exp.location}</span>
           </>
         )}
       </div>
 
-      {/* description */}
-      <p className="text-neutral-700 xs:text-sm text-xs dark:text-neutral-400">
-        {exp.description}
-      </p>
+      {/* ownership bullets */}
+      <ul className="mt-1 flex flex-col gap-1.5">
+        {exp.highlights.map((h, i) => (
+          <li
+            key={i}
+            className="flex gap-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400"
+          >
+            <span className="select-none text-neutral-300 dark:text-neutral-700">–</span>
+            <span>{h}</span>
+          </li>
+        ))}
+      </ul>
 
-      {/* stack */}
-      <div className="xs:text-sm text-xs text-neutral-600 dark:text-neutral-300">
-        <span className="text-neutral-500">Tech Stack:</span>{" "}
-        {exp.techStack?.join(", ")}
+      {/* stack chips | case-study link */}
+      <div className="mt-1 flex flex-wrap items-center gap-2">
+        {exp.stack?.map((t) => (
+          <span
+            key={t}
+            className="rounded border border-black/[0.08] dark:border-white/[0.08] px-1.5 py-0.5 font-mono text-[10px] text-neutral-500"
+          >
+            {t}
+          </span>
+        ))}
+        {exp.caseStudySlug && (
+          <Link
+            href={`/work/${exp.caseStudySlug}`}
+            className="ml-auto inline-flex items-center gap-1 font-mono text-xs text-neutral-900 transition-all hover:gap-1.5 dark:text-white"
+          >
+            case study <FiArrowUpRight className="size-3.5" />
+          </Link>
+        )}
       </div>
-    </div>
+    </li>
   );
 }
 
 export function Experience() {
   return (
     <section className="flex flex-col gap-5">
-      {/* title | subtitle */}
-      <div>
-        <h3 className="md:text-3xl xs:text-2xl text-xl font-bold">
-          Experience
-        </h3>
-        <p className="text-sm mt-1 text-neutral-400 dark:text-neutral-500">
-          Focused on building and shipping products fast, with clean, scalable
-          code that keeps releases smooth and stress-free.
-        </p>
-      </div>
-
-      {/* experience */}
-      <div className="flex flex-col gap-3">
-        {EXPERIENCE.map((e, idx) => (
-          <Card key={idx} exp={e} />
+      <SectionHeading
+        label="~/experience"
+        title="Experience"
+        subtitle="Internship → founding engineer → full-stack product work."
+      />
+      <ol className="flex flex-col">
+        {EXPERIENCE.map((e, i) => (
+          <Entry key={i} exp={e} />
         ))}
-      </div>
+      </ol>
     </section>
   );
 }

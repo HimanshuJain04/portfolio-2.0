@@ -1,35 +1,93 @@
-export type Skill = {
+import type { IconType } from "react-icons";
+import {
+  SiDocker,
+  SiDrizzle,
+  SiExpress,
+  SiFramer,
+  SiGit,
+  SiHono,
+  SiJavascript,
+  SiMongodb,
+  SiNestjs,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiReact,
+  SiRedis,
+  SiRust,
+  SiSolana,
+  SiStripe,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiVercel,
+} from "react-icons/si";
+
+export type Tech = {
   label: string;
-  icon: string;
-  invertOnDark?: boolean;
+  Icon: IconType;
+  /** Daily driver vs. worked-with — drives the fill/outline treatment. */
+  primary?: boolean;
 };
 
-// First marquee
-export const SKILLS1: Skill[] = [
-  { label: "Next.js", icon: "/icons/nextjs.svg" },
-  { label: "React.js", icon: "/icons/react.svg" },
-  { label: "Tailwind CSS", icon: "/icons/tailwind.svg" },
-  { label: "CSS3", icon: "/icons/css3.svg" },
-  { label: "HTML5", icon: "/icons/html5.svg" },
-  { label: "JavaScript", icon: "/icons/javascript.svg" },
-  { label: "TypeScript", icon: "/icons/typescript.svg" },
-  { label: "React Native", icon: "/icons/react.svg" },
-  { label: "Framer Motion", icon: "/icons/framer.svg" },
-  { label: "Shadcn UI", icon: "/icons/shadcn.svg", invertOnDark: true },
-  { label: "Radix UI", icon: "/icons/radix.svg", invertOnDark: true },
-];
+export type StackGroup = {
+  label: string;
+  items: Tech[];
+};
 
-// Second marquee
-export const SKILLS2: Skill[] = [
-  { label: "Node.js", icon: "/icons/nodejs.svg" },
-  { label: "Express.js", icon: "/icons/express.svg", invertOnDark: true },
-  { label: "MongoDB", icon: "/icons/mongodb.svg" },
-  { label: "HONO", icon: "/icons/hono.svg" },
-  { label: "Firebase", icon: "/icons/firebase.svg" },
-  { label: "Prisma ORM", icon: "/icons/prisma.svg", invertOnDark: true },
-  { label: "Vercel", icon: "/icons/vercel.svg", invertOnDark: true },
-  { label: "Docker", icon: "/icons/docker.svg" },
-  { label: "Git", icon: "/icons/git.svg" },
-  { label: "Solana", icon: "/icons/solana.svg" },
-  { label: "Metaplex", icon: "/icons/metaplex.svg", invertOnDark: true },
+export const STACK: StackGroup[] = [
+  {
+    label: "Languages",
+    items: [
+      { label: "TypeScript", Icon: SiTypescript, primary: true },
+      { label: "JavaScript", Icon: SiJavascript, primary: true },
+      { label: "Rust", Icon: SiRust },
+    ],
+  },
+  {
+    label: "Frontend",
+    items: [
+      { label: "React", Icon: SiReact, primary: true },
+      { label: "Next.js", Icon: SiNextdotjs, primary: true },
+      { label: "React Native", Icon: SiReact, primary: true },
+      { label: "Tailwind", Icon: SiTailwindcss, primary: true },
+      { label: "Framer Motion", Icon: SiFramer },
+    ],
+  },
+  {
+    label: "Backend",
+    items: [
+      { label: "Node.js", Icon: SiNodedotjs, primary: true },
+      { label: "Nest.js", Icon: SiNestjs, primary: true },
+      { label: "Hono", Icon: SiHono },
+      { label: "Express", Icon: SiExpress },
+    ],
+  },
+  {
+    label: "Data",
+    items: [
+      { label: "PostgreSQL", Icon: SiPostgresql, primary: true },
+      { label: "Drizzle", Icon: SiDrizzle, primary: true },
+      { label: "Redis", Icon: SiRedis, primary: true },
+      { label: "Prisma", Icon: SiPrisma },
+      { label: "MongoDB", Icon: SiMongodb },
+      { label: "Supabase", Icon: SiSupabase },
+    ],
+  },
+  {
+    label: "Payments & Web3",
+    items: [
+      { label: "Stripe", Icon: SiStripe, primary: true },
+      { label: "Solana", Icon: SiSolana, primary: true },
+    ],
+  },
+  {
+    label: "Infra",
+    items: [
+      { label: "Docker", Icon: SiDocker },
+      { label: "Vercel", Icon: SiVercel },
+      { label: "Git", Icon: SiGit, primary: true },
+    ],
+  },
 ];

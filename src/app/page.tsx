@@ -1,12 +1,14 @@
 "use client";
 
 import { FloatingDockSection } from "@/components/common/floating-dock-section";
+import { About } from "@/components/home/about";
 import { AboutMe } from "@/components/home/about-me";
 import { Activity } from "@/components/home/activity";
+import { Contact } from "@/components/home/contact-us";
 import { Experience } from "@/components/home/experience";
 import { Footer } from "@/components/home/footer";
 import { Navbar } from "@/components/home/navbar";
-import { Projects } from "@/components/home/projects-section";
+import { SelectedWork } from "@/components/home/selected-work";
 import { Skills } from "@/components/home/skills";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { useLenis } from "@/hooks/useLenis";
@@ -17,32 +19,26 @@ export default function Home() {
 
   return (
     <div className="relative pt-32 pb-24 scroll-smooth bg-white dark:bg-black w-full">
-      <Script
-        id="ld-person"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
+      <Script id="ld-person" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Himanshu Jain",
           url: "https://www.himanshu.works",
-          image: "https://www.himanshu.works/images/profile.jpg",
+          image: "https://www.himanshu.works/images/profile.png",
           sameAs: [
-            // Add profiles when available
+            "https://github.com/HimanshuJain04",
+            "https://www.linkedin.com/in/himanshu-jain-72b48925a",
+            "https://x.com/_Himanshu_dev",
           ],
           jobTitle: "Software Engineer",
           worksFor: {
             "@type": "Organization",
-            name: "Mintix",
+            name: "GastroSmart",
           },
         })}
       </Script>
-      <Script
-        id="ld-website"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
+      <Script id="ld-website" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
@@ -54,13 +50,15 @@ export default function Home() {
       </Script>
       <StarsBackground />
 
-      <div className="max-w-2xl relative px-6 md:px-0 z-10 w-full min-h-screen mx-auto flex flex-col gap-10">
+      <div className="max-w-2xl relative px-6 md:px-0 z-10 w-full min-h-screen mx-auto flex flex-col gap-16">
         <Navbar />
         <AboutMe />
-        <Skills />
-        <Activity />
+        <SelectedWork />
         <Experience />
-        <Projects />
+        <Activity />
+        <Skills />
+        <About />
+        <Contact />
         <Footer />
         <FloatingDockSection />
       </div>

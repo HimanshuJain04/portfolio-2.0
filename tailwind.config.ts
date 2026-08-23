@@ -2,6 +2,7 @@ import svgToDataUri from "mini-svg-data-uri";
 import type { Config } from "tailwindcss";
 import { default as flattenColorPalette } from "tailwindcss";
 import colors from "tailwindcss/colors";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -14,6 +15,10 @@ const config: Config = {
       colors: {
         primary: colors.blue,
         accent: colors.orange,
+      },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-geist-mono)", ...defaultTheme.fontFamily.mono],
       },
       screens: {
         xs: "500px",

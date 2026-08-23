@@ -1,44 +1,69 @@
+import { btnGhost, btnPrimary } from "@/lib/ui";
 import Image from "next/image";
+import Link from "next/link";
 
 export function AboutMe() {
-  const highlight = "text-neutral-900 dark:text-neutral-200";
+  const hl = "text-neutral-900 dark:text-neutral-100 font-medium";
   return (
-    <div className="flex sm:flex-row flex-col-reverse gap-10">
-      {/* name | bio */}
-      <div className="flex z-20 flex-col gap-2">
-        {/* name */}
-        <h1 className="md:text-5xl xs:text-4xl text-3xl font-bold">
-          Hi, I&apos;m Himanshu 👋
-        </h1>
-
-        <h2 className="sr-only">
-          Software Engineer — personal portfolio of Himanshu Jain
-        </h2>
-
-        {/* bio */}
-        <h6 className="text-neutral-700 md:text-base text-sm dark:text-neutral-400">
-          Software engineer available for{" "}
-          <span className={highlight}>contract or full-time roles</span>, with
-          hands-on experience{" "}
-          <span className={highlight}>
-            building and shipping products quickly
+    <section className="flex flex-col gap-6">
+      <div className="flex sm:flex-row flex-col-reverse gap-8 sm:items-center justify-between">
+        {/* eyebrow | name | thesis */}
+        <div className="flex z-20 flex-col gap-3">
+          <span className="font-mono text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
+            Software Engineer
           </span>
-          . Passionate about <span className={highlight}>emerging tech</span>{" "}
-          and{" "}
-          <span className={highlight}>scaling ideas to reach real users.</span>
-        </h6>
+
+          <h1 className="md:text-5xl xs:text-4xl text-3xl font-bold tracking-tight">
+            Hi, I&apos;m Himanshu 👋
+          </h1>
+
+          <h2 className="sr-only">
+            Software Engineer — personal portfolio of Himanshu Jain
+          </h2>
+
+          <p className="text-neutral-700 md:text-lg text-base dark:text-neutral-300 leading-relaxed">
+            I take products from <span className={hl}>zero to shipped</span> —
+            web, mobile, backend, payments, and on-chain.
+          </p>
+        </div>
+
+        {/* profile image */}
+        <div className="md:size-36 self-start sm:self-center sm:size-32 size-24 shrink-0 relative">
+          <Image
+            src="/images/profile.png"
+            alt="Portrait of Himanshu Jain"
+            height={144}
+            width={144}
+            priority
+            className="rounded-2xl object-cover ring-1 ring-black/10 dark:ring-white/15"
+          />
+        </div>
       </div>
 
-      {/* profile image */}
-      <div className="md:size-40 self-center sm:size-32 size-28 shrink-0 relative">
-        <Image
-          src="/images/profile.png"
-          alt="Portrait of Himanshu Jain"
-          height={140}
-          width={140}
-          className="rounded-full object-contain"
-        />
+      {/* proof line */}
+      <p className="text-neutral-600 dark:text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl">
+        Founding engineer on a Web3 ticketing platform — built the web app,
+        organizer dashboard, iOS scanner, and the on-chain minting pipeline.
+        Solo.
+      </p>
+
+      {/* actions | availability */}
+      <div className="flex flex-wrap items-center gap-3">
+        <Link href="#work" className={btnPrimary}>
+          Selected work
+        </Link>
+        <Link href="/resume" className={btnGhost}>
+          Résumé
+        </Link>
+
+        <span className="sm:ml-auto inline-flex items-center gap-2 font-mono text-xs text-neutral-500 dark:text-neutral-400">
+          <span className="relative flex size-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
+            <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+          </span>
+          Open to full-time &amp; contract
+        </span>
       </div>
-    </div>
+    </section>
   );
 }

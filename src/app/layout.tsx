@@ -2,6 +2,7 @@ import { KEYWORDS } from "@/constants/seo";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { CustomThemeProvider } from "./CustomThemeProvider";
+import { geistMono, geistSans } from "./fonts";
 import "./globals.css";
 
 const siteUrl = "https://www.himanshu.works";
@@ -76,8 +77,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
+      <body className="font-sans antialiased" suppressHydrationWarning>
         <CustomThemeProvider>
           <main>{children}</main>
         </CustomThemeProvider>

@@ -5,96 +5,71 @@ export type Experience = {
   to: string;
   type: string;
   href?: string;
-  description?: string;
-  techStack?: string[];
   location?: string;
+  // Concrete ownership bullets — what was built, not "shipped features".
+  highlights: string[];
+  // Key tech only (≤5), rendered as subtle mono chips. Full stack lives in the Stack section.
+  stack?: string[];
+  // Links to a /work/[slug] case study, when one exists.
+  caseStudySlug?: string;
 };
 
 export const EXPERIENCE: Experience[] = [
   {
     companyName: "GastroSmart",
     position: "Software Engineer",
-    from: "January 2026",
+    from: "Jan 2026",
     to: "Present",
     location: "Remote",
     type: "Full-time",
-    // href: "https://gastrosmart.com",
-    description:
-      "Building full-stack features, improving system reliability, and shipping production-ready functionality in a team-driven environment.",
-    techStack: [
-      "Next.js",
-      "Nest.js",
-      "TypeScript",
-      "Mantine UI",
-      "Redis",
-      "Drizzle ORM",
-      "PostgreSQL",
-      "Docker",
+    highlights: [
+      "Building full-stack product features for a production food-catering platform.",
+      "Working across Nest.js APIs, a PostgreSQL/Drizzle data layer, Redis, and the Next.js app.",
     ],
+    stack: ["Next.js", "Nest.js", "PostgreSQL", "Redis", "Docker"],
   },
   {
     companyName: "Mintix",
-    position: "Software Engineer / Founding Engineer",
-    from: "December 2024",
-    to: "January 2026",
+    position: "Founding Engineer",
+    from: "Dec 2024",
+    to: "Jan 2026",
     location: "Remote",
     type: "Full-time",
     href: "https://mintixapp.com",
-    description:
-      "Built Mintix’s Web3-powered ticketing platform from the ground up — architecting apps, websites, and backend systems, integrating payments, and taking the product to production scale.",
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "React Native",
-      "Tailwind CSS",
-      "Redis",
-      "Stripe",
-      "Solana",
-      "Metaplex",
-      "Web3.js",
-      "Shyft SDK",
-      "Drizzle ORM",
-      "PlanetScale",
+    highlights: [
+      "Sole engineer — built the web app, organizer dashboard, React Native iOS scanner, and backend from scratch.",
+      "Designed the on-chain minting pipeline (Solana + Metaplex) that turns each ticket into an NFT.",
+      "Wired Stripe payments end-to-end into the ticket purchase → mint flow.",
+      "Took the product to production-ready ahead of the company's launch.",
     ],
+    stack: ["Next.js", "React Native", "Solana", "Stripe", "Drizzle"],
+    caseStudySlug: "mintix",
   },
   {
     companyName: "Hexleap",
     position: "Frontend Developer Intern",
-    from: "April 2024",
-    to: "January 2025",
+    from: "Apr 2024",
+    to: "Jan 2025",
     type: "Internship",
     href: "https://www.hexleap.com",
     location: "Remote",
-    description:
-      "Developed and shipped frontend for multiple dashboards and web apps from scratch — focusing on clean UI, scalable components, and smooth interactions.",
-    techStack: [
-      "Next.js",
-      "React.js",
-      "TypeScript",
-      "React Query",
-      "Tailwind CSS",
-      "Framer Motion",
+    highlights: [
+      "Built dashboards and marketing/landing pages from scratch as a frontend developer.",
+      "Focused on reusable component architecture and smooth, considered interactions.",
     ],
+    stack: ["Next.js", "React Query", "Tailwind", "Framer Motion"],
   },
   {
-    position: "Freelance",
-    from: "January 2024",
+    position: "Freelance — Full-stack Engineer",
+    from: "Jan 2024",
     to: "Present",
     type: "Freelance",
-    description:
-      "Worked on multiple international projects delivering full-stack solutions, building modern UIs, APIs, and integrations to ship products quickly.",
-    techStack: [
-      "Next.js",
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Node.js",
-      "Hono",
-      "Supabase",
-      "PostgreSQL",
-      "Drizzle",
-      "Prisma",
-      "Stripe",
+    highlights: [
+      "Built an internal work-management platform — a flexible ClickUp alternative — for a Singapore-based company.",
+      "Owned it full-stack: a flexible custom-field data model, permissions, and real-time updates.",
+      "Delivered production features across multiple international client projects.",
     ],
+    stack: ["Next.js", "Node.js", "PostgreSQL", "Drizzle"],
+    caseStudySlug: "work-management",
   },
 ];
