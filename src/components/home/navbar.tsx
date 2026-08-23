@@ -1,10 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import logo from "../../../public/images/hjLogo.png";
+import { Logo } from "../common/logo";
 import ThemeSwitch from "../common/theme-switch";
 
 const NAV_LINKS = [
@@ -37,15 +36,9 @@ export function Navbar() {
       <Link
         href="/"
         aria-label="Himanshu Jain — Home"
-        className="flex items-center"
+        className="flex items-center text-neutral-900 dark:text-white"
       >
-        <Image
-          src={logo}
-          alt="Himanshu Jain logo"
-          width={34}
-          height={34}
-          className="size-8 rounded-lg object-contain ring-1 ring-black/10 dark:ring-white/10"
-        />
+        <Logo className="h-7 w-[22px]" />
       </Link>
 
       {/* center nav links */}
