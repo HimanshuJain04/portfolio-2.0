@@ -23,7 +23,7 @@ export function Contact() {
           className={btnGhost}
         >
           <FaXTwitter className="size-4" />
-          X
+          @himanxhujain
         </a>
       </div>
     </section>
