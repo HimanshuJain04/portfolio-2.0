@@ -1,6 +1,6 @@
 import { btnGhost, btnPrimary } from "@/lib/ui";
 import { BiLogoGmail } from "react-icons/bi";
-import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SectionHeading } from "../common/section-heading";
 
 export function Contact() {
@@ -17,13 +17,13 @@ export function Contact() {
           himanshu09.dev@gmail.com
         </a>
         <a
-          href="https://www.linkedin.com/in/himanxhujain/"
+          href="https://x.com/himanxhujain"
           target="_blank"
           rel="noreferrer"
           className={btnGhost}
         >
-          <FaLinkedin className="size-4" />
-          LinkedIn
+          <FaXTwitter className="size-4" />
+          X
         </a>
       </div>
     </section>

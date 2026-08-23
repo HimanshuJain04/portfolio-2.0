@@ -1,5 +1,6 @@
 "use client";
 
+import { scrollToId } from "@/lib/scroll";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -47,6 +48,7 @@ export function Navbar() {
           <Link
             key={l.href}
             href={l.href}
+            onClick={(e) => scrollToId(e, l.href)}
             className="rounded-md px-2.5 py-1 font-mono text-xs lowercase text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
           >
             {l.label}

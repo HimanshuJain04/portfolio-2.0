@@ -3,6 +3,12 @@
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    lenis?: Lenis;
+  }
+}
+
 export function useLenis() {
   useEffect(() => {
     const lenis = new Lenis({
@@ -15,6 +21,9 @@ export function useLenis() {
       syncTouch: false, // disables syncing to touch input frame-by-frame
     });
 
+    // Exposed so nav links / buttons can trigger smooth scroll via lenis.scrollTo.
+    window.lenis = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -24,6 +33,7 @@ export function useLenis() {
 
     return () => {
       lenis.destroy();
+      if (window.lenis === lenis) delete window.lenis;
     };
   }, []);
 }

@@ -1,3 +1,4 @@
+import { scrollToId } from "@/lib/scroll";
 import { btnGhost, btnPrimary } from "@/lib/ui";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,7 +52,11 @@ export function AboutMe() {
 
       {/* actions | availability */}
       <div className="flex flex-wrap items-center gap-3">
-        <Link href="#work" className={btnPrimary}>
+        <Link
+          href="#work"
+          onClick={(e) => scrollToId(e, "#work")}
+          className={btnPrimary}
+        >
           Selected work
         </Link>
         <a
